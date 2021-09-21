@@ -1,0 +1,32 @@
+nav {
+    background: #eee;
+    display: flex;
+}
+
+a {
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+    position: relative;
+
+    &.active {
+        text-decoration: underline;
+    }
+
+    &:nth-child(n+2)::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 12.5%;
+        height: 75%;
+        border-left: 1px solid darkgray;
+    }
+
+    &:hover {
+        background-color: darkgray;
+    }
+}
+
+.load-active {
+    background-color: lightgray;
+}

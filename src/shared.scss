@@ -1,0 +1,21 @@
+
+.active {
+    background-color: purple;
+    color: white;
+}
+
+.btn {
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+
+    border: 1px solid purple;
+    border-radius: 3px;
+    color: purple;
+
+    padding: .5rem;
+
+    &:hover {
+        background-color: rgb(238, 214, 238);
+    }
+}

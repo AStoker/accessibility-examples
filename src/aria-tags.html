@@ -1,0 +1,51 @@
+<h1>Aria tags</h1>
+
+<section>
+    <h2>Topics</h2>
+    <ul>
+        <li>Using <code>aria-current</code> for active items in a set</li>
+        <li>Using roles</li>
+    </ul>
+</section>
+
+<section>
+    <h2>Examples</h2>
+
+    <section>
+        <h3>Using <code>aria-current</code> for active items in a set</h3>
+
+        <section>
+            <h4>Incorrect <code>aria-current</code> usage</h4>
+    
+            <ul>
+                <li class="active">Item 1</li>
+                <li>Item 2</li>
+            </ul>
+        </section>
+
+        <section>
+            <h4>Correct <code>aria-current</code> usage</h4>
+    
+            <ul>
+                <li aria-current="true" class="active">Item 1</li>
+                <li>Item 2</li>
+            </ul>
+        </section>
+    </section>
+
+    <section>
+        <h3>Using <code>role</code> to create a <code>button</code></h3>
+
+        <section>
+            <h4>Incorrect usage</h4>
+
+            <div class="btn">Click here</div>
+        </section>
+
+        <section>
+            <h4>Correct usage</h4>
+    
+            <div class="btn" tabindex="0" role="button" aria-pressed="false">Click here</div>
+        </section>
+    </section>
+</section>

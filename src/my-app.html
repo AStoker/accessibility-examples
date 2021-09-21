@@ -1,0 +1,49 @@
+<import from="./welcome-page"></import>
+<import from="./missing-page"></import>
+
+<import from="./aria-tags.html"></import>
+<import from="./associating-elements.html"></import>
+<import from="./tab-order.html"></import>
+<import from="./page-navigation.html"></import>
+<import from="./color-choices.html"></import>
+<import from="./responsive-design.html"></import>
+
+<nav>
+    <a
+        active.class="_welcome"
+        aria-current.bind="_welcome"
+        load="route:welcome-page; active.bind:_welcome"
+    >Welcome</a>
+    <a
+        active.class="_ariaTags"
+        aria-current.bind="_ariaTags"
+        load="route:aria-tags; active.bind:_ariaTags"
+    >Aria Tags</a>
+    <a
+        active.class="_associatingElements"
+        aria-current.bind="_associatingElements"
+        load="route:associating-elements; active.bind:_associatingElements"
+    >Associating Elements</a>
+    <a
+        active.class="_tabOrder"
+        aria-current.bind="_tabOrder"
+        load="route:tab-order; active.bind:_tabOrder"
+    >Tab Order</a>
+    <a
+        active.class="_pageNavigation"
+        aria-current.bind="_pageNavigation"
+        load="route:page-navigation; active.bind:_pageNavigation"
+    >Page Navigation</a>
+    <a
+        active.class="_color"
+        aria-current.bind="_color"
+        load="route:color-choices; active.bind:_color"
+    >Color</a>
+    <a
+        active.class="_responsiveDesign"
+        aria-current.bind="_responsiveDesign"
+        load="route:responsive-design; active.bind:_responsiveDesign"
+    >Responsive Design</a>
+</nav>
+
+<au-viewport default="welcome-page" fallback="missing-page"></au-viewport>
