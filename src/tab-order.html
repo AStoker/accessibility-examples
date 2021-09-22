@@ -1,1 +1,64 @@
 <h1>Tab Order</h1>
+
+<section>
+    <h2>Topics</h2>
+    <ul>
+        <li>Having a logical layout</li>
+        <li>Using <code>tabindex</code> to have fix a logical layout</li>
+    </ul>
+</section>
+
+
+<section>
+    <h2>Examples</h2>
+
+    <section>
+        <h3>Having a logical layout</h3>
+
+        <section>
+            <h4>Incorrect logical layout</h4>
+    
+            <div id="incorrectLogicalLayout">
+                <div class="incorrect-logical-layout">
+                    <button>Third</button>
+                    <button>Second</button>
+                    <button>First</button>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h4>Correct logical layout</h4>
+    
+            <div id="correctLogicalLayout">
+                <div class="correct-logical-layout">
+                    <button>First</button>
+                    <button>Second</button>
+                    <button>Third</button>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <section>
+        <h3>Using <code>tabindex</code> to have fix a logical layout</h3>
+
+        <section>
+            <h4>Correct <code>tabindex</code> usage</h4>
+    
+            <div id="incorrectLogicalLayout">
+                <div class="incorrect-logical-layout">
+                    <!--
+                        Manually managing tabindex is hell. Don't do it.
+                        Using a tabindex greater than 0 is considered an anti-pattern.
+                        It is better to have correct logical layout and use css to style as desired.
+                    -->
+                    <button tabindex="3">Third</button>
+                    <button tabindex="2">Second</button>
+                    <button tabindex="1">First</button>
+                </div>
+            </div>
+        </section>
+
+    </section>
+</section>

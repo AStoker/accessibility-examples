@@ -1,0 +1,12 @@
+
+#incorrectLogicalLayout {
+    height: 1rem;
+    .incorrect-logical-layout {
+        position: absolute;
+        left: 0;
+    
+        > * {
+            float: right;
+        }
+    }
+}

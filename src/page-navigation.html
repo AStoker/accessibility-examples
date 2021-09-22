@@ -7,3 +7,49 @@
         <li>Using semantic HTML</li>
     </ul>
 </section>
+
+<section>
+    <h2>Examples</h2>
+
+    <section>
+        <h3>Using landmarks</h3>
+
+        <!--
+            Landmark roles should be used sparingly to identify larger overall sections of the document.
+            Using too many landmarks can create noise in screen readers.
+
+            Preference is to use HTML <aside>
+        -->
+        <section>
+            <h4>Correct landmarks usage</h4>
+    
+            <div role="complementary" aria-label="Supporting Details">
+                <p>I'm some supporting information about the page.</p>
+            </div>
+            <!--
+                Using <aside> automatically communicates the role of complementary
+            -->
+            <aside aria-label="More Supporting Details">
+                <p>I'm also some supporting information about the page</p>
+            </aside>
+        </section>
+    </section>
+
+    <section>
+        <h3>Using semantic HTML</h3>
+
+        <section>
+            <h4>Incorrect semantic HTML</h4>
+    
+            <div class="btn">I'm a "button"</div>
+        </section>
+
+        <section>
+            <h4>Correct semantic HTML</h4>
+    
+            <button class="btn">I'm a "button"</button>
+        </section>
+    </section>
+
+
+</section>

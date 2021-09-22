@@ -3,7 +3,55 @@
 <section>
     <h2>Topics</h2>
     <ul>
-        <li>Using <code>described-by</code> to show additional details</li>
-        <li>Using <code>alert</code> to audibly tell screen readers about changes</li>
+        <li>Using <code>describedby</code> to show additional details</li>
+        <li>Using <code>alert</code> to alert screen readers</li>
     </ul>
+</section>
+
+
+<section>
+    <h2>Examples</h2>
+
+    <section>
+        <h3>Using <code>aria-describedby</code> to show additional details</h3>
+
+        <section>
+            <h4>Incorrect <code>aria-describedby</code> usage (not using it)</h4>
+    
+            <button class="btn">Close</button>
+            <div class="info">Closing this window will discard any information entered and return you back to the main page</div>
+        </section>
+
+        <section>
+            <h4>Correct <code>aria-describedby</code> usage</h4>
+    
+            <button class="btn" aria-describedby="descriptionClose">Close</button>
+            <div class="info" id="descriptionClose">Closing this window will discard any information entered and return you back to the main page</div>
+        </section>
+    </section>
+
+    <section>
+        <h3>Using <code>alert</code> to alert screen readers</h3>
+
+        <section>
+            <h4>Incorrect <code>alert</code> usage</h4>
+
+            <ul ref="incorrectAlerts"></ul>
+
+            <button class="btn" click.trigger="generateIncorrectError()">Do the thing</button>
+        </section>
+
+        <section>
+            <h4>Correct <code>alert</code> usage</h4>
+    
+            <!--
+                aria-atomic allows you to configure how you want the screen reader to alert the user to the contents.
+                The default is false, which means the screen reader will alert the user to the changed contents of the element, so only newly added alerts.
+                Setting it to true means the screen reader will alert the user to the entire element, and therefore all the alerts.
+            -->
+            <ul ref="correctAlerts" role="alert" aria-atomic="true"></ul>
+
+            <button class="btn" click.trigger="generateCorrectError()">Click here</button>
+        </section>
+    </section>
 </section>
